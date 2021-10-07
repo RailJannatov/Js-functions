@@ -1,16 +1,16 @@
 // is number exist in array function
 
-let arr =[0,3,5,6,12,18,33,76,122,]
-
-let existNumberInArray =(number)=>{
-    for(let i = 0 ; i < arr.length ; i++){
-        if(number === arr[i]){
+// let arr =[0,3,5,6,12,18,33,76,122,]
+let existNumberInArray =(number,array)=>{
+    for(let i = 0 ; i < array.length ; i++){
+        if(number === array[i]){
             return true;
         }
     }
     return false;
 }
-console.log(existNumberInArray("33"));
+let arr = [2,5,6,7,4,9]
+console.log(existNumberInArray(8,arr));
 
 // return even numbers in the array
 let returnEvenNumbers = (arr) =>{
@@ -28,24 +28,35 @@ console.log(returnEvenNumbers(arr));
 
 
 // calculator
-
+function sum(numberOne,numberTwo){
+    return numberOne + numberTwo;
+}
+function substraction(numberOne,numberTwo){
+    return numberOne - numberTwo;
+}
+function divide(numberOne,numberTwo){
+    return numberOne / numberTwo;
+}
+function multiply(numberOne , numberTwo){
+    return numberOne * numberTwo;
+}
 let calculator  = (firstNumber,secondNumber,operator)=>{
     if(operator === "+"){
-        return firstNumber + secondNumber;
+        return sum(firstNumber,secondNumber);
     }
     else if(operator === "-"){
-        return firstNumber - secondNumber;
+        return substraction(firstNumber,secondNumber);
     }
     else if(operator === "*"){
-        return firstNumber * secondNumber;
+        return multiply(firstNumber,secondNumber);
     }
     else if(operator ==="/"){
-        return firstNumber / secondNumber;
+        return divide(firstNumber,secondNumber);
     }
     else 
     return false;
 }
-console.log(calculator(25,4,"*"));
+console.log(calculator(25,4,"+"));
 
 //factorial
 function factorial(number){
@@ -58,6 +69,6 @@ function factorial(number){
     }
     return number;
 }
-console.log(factorial(6));
+console.log(factorial(1));
 
 
